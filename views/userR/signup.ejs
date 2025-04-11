@@ -1,0 +1,26 @@
+<% layout("/layouts/bilerplate")  %>
+<div class=" row offset-3  ">
+  <div class="col-8">
+<h1>Sign Up page</h1>
+<br><br>
+<form method="post" action="/signUp" novalidate class="needs-validation">
+<div class="mb-4" >
+<label for="user" class="form-label"><b>UserName</b></label>
+<input type="text" name="username" placeholder="Enter user name" id="user" class="form-control" required>
+<div class="invalid-feedback">Please enter username</div>
+</div>
+<div class="mb-4" >
+  <label for="email" class="form-label"><b>Email</b></label>
+  <input type="email" name="email" placeholder="Enter your email id" id="email" class="form-control" required>
+  <div class="invalid-feedback">Please enter correct email id</div>
+  </div>
+  <div class="mb-4" >
+    <label for="password" class="form-label"><b>Password</b></label>
+    <input type="password" name="password" placeholder="Enter user name" id="password" class="form-control" required>
+    <div class="invalid-feedback">Please enter your password</div>
+    </div>
+    <br>
+    <button class="btn btn-success">Sign Up</button>
+</form>
+  </div>
+  </div>

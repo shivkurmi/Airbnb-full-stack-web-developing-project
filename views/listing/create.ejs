@@ -1,0 +1,43 @@
+<% layout("/layouts/bilerplate")  %>
+  <div class=" row offset-3  ">
+    <div class="col-8">
+  <h1>create a list</h1>
+  <form method="post" action="/listing" novalidate class="needs-validation" enctype="multipart/form-data">
+<div class="mb-4" >
+<label for="title" class="form-label"><b>Title</b></label>
+  <input type="text" name="list[title]" placeholder="Enter your title" class="form-control" required>
+  <div class="invalid-feedback">Please enter vaild-title</div>
+</div>
+    <div class="mb-4"> 
+      <label for="description" class="form-label">
+<b>Description</b>
+      </label>
+      <textarea name="list[description]" placeholder="enter your description" class="form-control" required></textarea>
+      <div class="invalid-feedback">Please enter vaild-description</div>
+    </div>
+    <div class="mb-4">
+      <label for="image" class="form-label"><b>Upload Image</b></label>
+      <input type="file" name="list[image]" class="form-control">
+      <div class="invalid-feedback">Please enter vaild-image</div>
+    </div >
+    <div class="row">
+    <div class="mb-4 col-md-4">
+      <label for="price" class="form-label"><b>Price</b></label>
+      <input type="text" name="list[price]" placeholder="Enter your price" class="form-control" required>
+      <div class="invalid-feedback">Please enter vaild-price</div>
+    </div>
+    <div class="mb-4 col-md-8">
+      <label for="location" class="form-label"><b>location</b></label>
+      <input type="text" name="list[location]" placeholder="Enter your location" class="form-control" required>
+      <div class="invalid-feedback">Please enter vaild- location</div>
+    </div>
+  </div>
+    <div class="mb-4">
+      <label for="country" class="form-label"><b>Country</b></label>
+      <input type="text" name="list[country]" placeholder="Enter your country" class="form-control" required>
+      <div class="invalid-feedback">Please enter vaild-country</div>
+    </div >
+    <button class="btn btn-c btn-danger">Add</button>
+  </form>
+</div>
+</div>

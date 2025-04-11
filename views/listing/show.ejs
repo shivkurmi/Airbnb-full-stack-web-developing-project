@@ -1,0 +1,64 @@
+<% layout("/layouts/bilerplate")  %>
+<div class="row offset-2">
+  <div class="col-8">
+  <h1><%= parti.title %></h1>
+  <div class="card1">
+    <img src="<%= parti.image %>" class="card-img-top" alt="image">
+    <div class="card-body">
+      <h3>Owned by <%= parti.owner.username %></h3>
+      <p class="card-text">
+        
+      <%= parti.description %>
+      </p>
+    <ul class="list-group list-group-flush show">
+      <li> &#8377 <%= parti.price.toLocaleString("en-IN") %></li>
+     <li> <%= parti.location %></li>
+     <li><%= parti.country %></li>
+    </ul>
+  </div>
+</div>
+<% if(currUser && currUser._id.equals(parti.owner._id)) {%>
+  <br>
+<div class="row show-btn">
+  <div class="col-2 btn-edit">
+    <a href="/listing/edit/<%= parti._id%> " class="btn">Edit</a>
+  </div>
+  <div class="col-1">
+  <form method="post" action="/listing/delete/<%= parti._id %>?_method=DELETE">
+    <button class="btn btn-danger ">Delete</button>
+  </div>
+  </form>
+</div>
+</div>
+<%} %>
+<div class="col-8 mt-5" >
+<h2>Reviews:</h2>
+<form action="/review/<%= parti._id%>" method="post" novalidate class="needs-validation">
+  <div class="mb-3">
+    <label for="rating" class="form-label">Rating :</label>
+    <input type="range" min="1" max="5" name="review[rating]" id="" class="form-range">
+  </div>
+  <div class="mb-3">
+    <label for="comment" class="form-label">Comment :</label>
+    <textarea name="review[comment]"rows="5" id="" class="form-control" required></textarea>
+    <div class="invalid-feedback">Comment is mentatary for to submit review</div>
+  </div>
+  <button class="btn btn-outline-dark">Submit</button>
+</form>
+</div>
+<div class=" row mt-5">
+  <hr>
+  <h1>All reviews:</h1>
+ <% for(const review of parti.reviews){   %>
+<div class="card  col-6 cart-b ms-3">
+  <h3></h3>
+<p><%= review.comment %></p>
+<p><%= review.rating %> star</p>
+<form method="post" action="/review/<%= parti._id %>/delete/<%= review._id %>?_method=DELETE">
+  <button class="btn btn-outline-dark">Delete</button>
+</form>
+</div>
+  <% } %>
+</div>
+</div>
+

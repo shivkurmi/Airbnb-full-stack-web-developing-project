@@ -1,0 +1,19 @@
+<% layout("/layouts/bilerplate")  %>
+  <h3>All listings</h3>
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+  <% for(let list of allList) { %>
+    <a href="/listing/<%= list._id %>">
+    <div class="card" >
+      <img src="<%= list.image %>" class="card-img-top" alt="This is a home picture">
+      <div class="card-body">
+        <p class="card-text">
+          <b><%= list.title %></b>
+          <p> &#8377 <%= list.price.toLocaleString("en-IN") %>/night</p>
+        </p>
+      </div>
+    </div>
+  </a>
+    <% } %>
+</div>
+
+

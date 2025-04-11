@@ -1,0 +1,92 @@
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container{
+  flex: 1;
+}
+.navbar{
+  height: 4rem;
+  font-size: larger;
+  background-color: white;
+}
+.fa-compass{
+  font-size: 2rem;
+  color: rgb(235, 19, 19);
+}
+.nav-link{
+  color: rgb(49, 47, 47);
+}
+.f-info a{
+  text-decoration: none;
+  color: #222222;
+}
+.f-info a:hover{
+  text-decoration:underline;
+  color: #222222;
+}
+
+.f-info{
+  text-align: center;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.f-info-f{
+  width: 100%;
+}
+
+.f-info-th{
+width: 100%;
+}
+.f-info-f i{
+  margin: 5px;
+  font-size: larger;
+}
+
+.row a{
+  text-decoration: none;
+}
+
+.card{
+  width: 20rem;
+  object-fit: cover;
+  border: none;
+  border-radius: 2rem;
+}
+
+.card-img-top{
+height: 20rem;
+border-radius: 1rem;
+}
+
+.card:hover{
+  width: 21rem;
+  object-fit: cover;
+}
+.btn-c{
+  background-color: brown;
+  color: antiquewhite;
+  padding: 5px;
+  font-weight: 700;
+}
+.show li{
+  list-style: none;
+}
+
+.show-btn{
+  display: flex;
+}
+.btn-edit a{
+  color: rgb(232, 236, 240);
+  border-radius: 8px;
+  /* padding: 7px; */
+  background-color: rgb(73, 80, 80);
+}
+
+.card-b{
+  border: 2px solid black;
+}

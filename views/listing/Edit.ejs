@@ -1,0 +1,42 @@
+
+<% layout("/layouts/bilerplate")  %>
+
+<div class="row offset-3">
+  <div class="col-10">
+  <h1>Edit page</h1>
+  <form method="post" action="/listing/<%= list._id %>?_method=PATCH" class="needs-validation" novalidate >
+  <div class="md-3">
+<label for="title" class="form-label"><b>Title</b></label>
+<input type="text" name="list[title]" value="<%= list.title %> " class="form-control" required>
+<div class="invalid-feedback">Please enter vaild-title</div>
+</div>
+<div class="md-3">
+  <label for="description"class="form-label"><b>Description</b></label>
+  <textarea name="list[description]" class="form-control" required><%= list.description %></textarea>
+  <div class="invalid-feedback">Please enter vaild-description</div>
+</div>
+<div class="md-3">
+  <label for="image"class="form-label"><b>Image</b></label>
+  <input type="text" name="list[image]" value="<%= list.image %>" class="form-control" required>
+  <div class="invalid-feedback">Please enter vaild-Image/url</div>
+</div>
+<div class="md-3">
+  <label for="price"class="form-label"><b>Price</b></label>
+  <input type="number" name="list[price]" value="<%= list.price %>" class="form-control" required>
+  <div class="invalid-feedback">Please enter vaild-price</div>
+</div>
+    <div class="md-3">
+      <label for="location"class="form-label"><b>Location</b></label>
+      <input type="text" name="list[location]" value="<%= list.location %>" class="form-control" required>
+      <div class="invalid-feedback">Please enter vaild-location</div>
+    </div>
+    <div class="md-3">
+      <label for="country"class="form-label"><b>Country</b></label>
+      <input type="text" name="list[country]" value="<%= list.country %>" class="form-control" required>
+      <div class="invalid-feedback">Please enter vaild-country name</div>
+    </div>
+    <br>
+    <button class="btn btn-outline-success">Edit</button>
+  </form>
+</div>
+</div>
